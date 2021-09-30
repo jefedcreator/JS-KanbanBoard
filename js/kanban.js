@@ -22,12 +22,12 @@ const create_item = () => {
   item.draggable = true;
   item.addEventListener("dragstart",
     (event)=>{
-        event.target.setData("text",event.target.id)
+        event.DataTransfer.setData("text",event.target.id)
     }
   )
   item.addEventListener("dragend",
   (event)=>{
-    event.target.clearData()
+    event.DataTransfer.clearData()
   })
   let input = document.createElement("input")
   item.appendChild(input)
